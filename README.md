@@ -1,12 +1,31 @@
-# To Do
+# Stack
 - material-ui
 - styled-components
 - TS
+- React and React hooks
 - GraphQL
-- Appollo
-
+- Apollo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Layouts
+- Landing page: like GitHub
+- Exam testarea: like Repl.it
+
+# Flows
+- Register, then select student/teacher. Thereafter taken to admin/test area.
+
+# Pages
+- Landing/login page
+- Exams page: list of exams available to you
+
+# Components
+- Button
+- TextArea
+- Collapsible container
+- Login component
+
+# Wiring
 
 ## Available Scripts
 
