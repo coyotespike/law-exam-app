@@ -24,6 +24,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - TextArea
 - Collapsible container
 - Login component
+- Timer
+
+### Timer
+Use CircularProgress, and a text component. Option to hide text. Option to kill (hide entire) component.
+
+On hiding entire component, display tooltip for 2 seconds "I will be in settings" and then disappear.
+
+Stretch: make Timer draggable.
 
 # Wiring
 
