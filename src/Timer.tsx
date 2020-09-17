@@ -10,15 +10,14 @@ function Timer(props: {timeInMinutes: number}) {
 
     React.useEffect(() => {
         const timer = setInterval(() => {
-            setTimeLeft((prevTime) => prevTime - 1);
-            setProgress((prevProgress) => (prevProgress - (timeLeft / props.timeInMinutes)));
+            setTimeLeft(prevTime => prevTime === 0 ? 0 : prevTime - 1);
+            setProgress(prevProgress => (prevProgress === 0 ? 0 : prevProgress - (timeLeft / props.timeInMinutes)));
         }, 10000);
 
         return () => {
             clearInterval(timer);
         };
-    }, []);
-
+    }, [props.timeInMinutes, timeLeft]);
     return (
         <Draggable>
             <div>
