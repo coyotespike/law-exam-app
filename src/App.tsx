@@ -1,9 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
-import TextField from "./TextField";
+import Essay from "./Essay";
 import Home from "./Home";
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/textfield">
-            <TextField />
+          <Route path="/essay">
+            <Essay />
           </Route>
           <Route path="/">
             <Home />

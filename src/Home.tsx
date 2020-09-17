@@ -25,7 +25,7 @@ function Home() {
         >
             Learn React
         </a>
-        <Link to="/textfield">TextField</Link>
+        <Link to="/essay">Essay</Link>
         <Timer timeInMinutes={110} />
     </header>
     )
