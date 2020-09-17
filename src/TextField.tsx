@@ -1,9 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
-import { TextField, FormHelperText, Input } from '@material-ui/core';
+import { TextField, Input } from '@material-ui/core';
 
+// the span below used to be FormHelperText, but this produces an error in StrictMode
+// >-(
 
 function OurTextField() {
+    const [text, setText] = React.useState('Write your essay here')
+    const [wordCount, setWordCount] = React.useState(0)
+
+    function handleChange(e: any) {
+        setText(e.target.value)
+        setWordCount(text.split(/\s+/).length)
+    }
+
     return (
         <div>
             <TextField
@@ -12,9 +21,10 @@ function OurTextField() {
                 placeholder="hell"
                 label='Dog'
                 fullWidth
-                helperText={<FormHelperText>Help Me!</FormHelperText>}
+                helperText={<span>{wordCount}</span>}
+                onChange={handleChange}
             ><Input
-                 value="hello"
+                 value={text}
                 />
             </TextField>
         </div>
