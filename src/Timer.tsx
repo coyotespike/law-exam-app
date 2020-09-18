@@ -2,7 +2,11 @@ import React from 'react';
 import Draggable from 'react-draggable';
 import { CircularProgress } from '@material-ui/core';
 
+// for use of ref below see: https://stackoverflow.com/questions/63603902/finddomnode-is-deprecated-in-strictmode-finddomnode-was-passed-an-instance-of-d
+
 function Timer(props: {timeInMinutes: number}) {
+    const nodeRef = React.useRef(null);
+
     const [timeLeft, setTimeLeft] = React.useState(props.timeInMinutes);
     const [progress, setProgress] = React.useState(100);
 
@@ -19,8 +23,8 @@ function Timer(props: {timeInMinutes: number}) {
         };
     }, [props.timeInMinutes, timeLeft]);
     return (
-        <Draggable>
-            <div>
+        <Draggable nodeRef={nodeRef}>
+            <div ref={nodeRef}>
                 <CircularProgress variant="static" value={progress} />
                 <div>Time remaining: {format(timeLeft)}</div>
             </div>
