@@ -1,18 +1,83 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Box, Input, TextField, Grid, Button,
+         createStyles, makeStyles, Theme, createMuiTheme, ThemeProvider, Typography
+} from '@material-ui/core';
+import { green, purple } from '@material-ui/core/colors';
+
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+        root: {
+            '& .MuiTextField-root': {
+                background: 'white',
+                margin: theme.spacing(1),
+                width: 800,
+            },
+        },
+        margin: {
+            margin: theme.spacing(1),
+            backgroundColor: '#2ebc4f',
+            borderColor: '#2ebc4f',
+        }
+    })
+);
+
+const theme = createMuiTheme({
+    palette: {
+        primary: green,
+    },
+});
 
 function Login() {
-    return <Input/>
-}
-
-class Input extends Component {
-    render() {
-        return (
-            <div>
-                <label htmlFor="username"> username: </label>
-                <input type="text" id="username" />
+    const classes = useStyles();
+    return (
+        <Box bgcolor="background.paper" borderRadius={8} width={500}>
+            <div style={{ display: 'flex', margin: 40}}>
+                <Grid
+                    container
+                    spacing={6}
+                    direction="column"
+                    alignItems="center"
+                >
+                    <Grid
+                        item
+                        xs={12}
+                        style={{minWidth: "70%"}}
+                    >
+                        <TextField
+                            fullWidth
+                            required
+                            label="somebody@somewhere.com"
+                            id="outlined-basic"
+                            variant="outlined"
+                            helperText="Email"/>
+                    </Grid>
+                    <Grid
+                        item
+                        xs={12}
+                        style={{minWidth: "70%"}}
+                    >
+                        <TextField
+                            fullWidth
+                            required
+                            id="outlined-basic"
+                            variant="outlined"
+                            helperText="Password"/>
+                    </Grid>
+                    <Grid
+                        item
+                        xs={12}
+                        style={{minWidth: "70%"}}
+                    >
+                            <Button variant="contained" color="primary" className={classes.margin}>
+                                <Typography variant="h6" gutterBottom>
+                                    Register or Login
+                                </Typography>
+                            </Button>
+                    </Grid>
+                </Grid>
             </div>
-        )
-    }
+        </Box>
+    )
 }
 
 export default Login;
