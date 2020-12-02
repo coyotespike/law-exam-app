@@ -19,11 +19,26 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Landing/login page
 - Exams page: list of exams available to you
 
+- Test creation page
+   - select from multiple choice, open answer, true/false
+   - Carousel at bottom or side shows all created questions
+   - Click card in carousel to nav to page
+   - Click and hold card in carousel to drag and re-arrange
+   - Button to enter student view
+   
 # Components
 - Button
 - TextArea
 - Collapsible container
 - Login component
+- Timer
+
+### Timer
+Use CircularProgress, and a text component. Option to hide text. Option to kill (hide entire) component.
+
+On hiding entire component, display tooltip for 2 seconds "I will be in settings" and then disappear.
+
+Stretch: make Timer draggable.
 
 # Wiring
 

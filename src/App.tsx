@@ -1,15 +1,30 @@
 import React from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import "./App.css";
-import LoginBox from "./LoginSignUp";
+
+import Essay from "./OpenEndedQuestion";
+import MultipleChoice from "./MultipleChoice";
+import Home from "./Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <LoginBox />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/essay">
+            <Essay />
+          </Route>
+          <Route path="/multiple">
+            <MultipleChoice />
+          </Route>
+
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
