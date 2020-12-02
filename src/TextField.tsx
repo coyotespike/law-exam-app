@@ -18,8 +18,8 @@ function OurTextField() {
             <TextField
                 multiline
                 variant="outlined"
-                placeholder="hell"
-                label='Dog'
+                placeholder="Oliver Wendell Holmes awaits"
+                label='Your brilliant answer'
                 fullWidth
                 helperText={<span>{wordCount}</span>}
                 onChange={handleChange}

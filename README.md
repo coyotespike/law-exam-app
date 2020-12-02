@@ -19,6 +19,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Landing/login page
 - Exams page: list of exams available to you
 
+- Test creation page
+   - select from multiple choice, open answer, true/false
+   - Carousel at bottom or side shows all created questions
+   - Click card in carousel to nav to page
+   - Click and hold card in carousel to drag and re-arrange
+   - Button to enter student view
+   
 # Components
 - Button
 - TextArea

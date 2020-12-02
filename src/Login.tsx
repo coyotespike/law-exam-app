@@ -1,8 +1,13 @@
 import React from 'react';
-import { Box, Input, TextField, Grid, Button,
-         createStyles, makeStyles, Theme, createMuiTheme, ThemeProvider, Typography
+import { Box,
+         Button,
+         Grid,
+         TextField,
+         Typography,
+         createStyles,
+         makeStyles,
+         Theme,
 } from '@material-ui/core';
-import { green, purple } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -20,12 +25,6 @@ const useStyles = makeStyles((theme: Theme) =>
         }
     })
 );
-
-const theme = createMuiTheme({
-    palette: {
-        primary: green,
-    },
-});
 
 function Login() {
     const classes = useStyles();
