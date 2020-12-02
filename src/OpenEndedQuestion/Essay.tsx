@@ -3,8 +3,8 @@ import Paper from '@material-ui/core/Paper';
 
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 
-import TextField from './TextField'
-import Drawer from './Drawer'
+import TextField from '../TextField'
+import Drawer from '../Drawer'
 import Container from './EssayContainer'
 
 const useStyles = makeStyles((theme: Theme) =>
