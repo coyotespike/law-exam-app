@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import Essay from "./OpenEndedQuestion";
+import MultipleChoice from "./MultipleChoice";
 import Home from "./Home";
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
           <Route path="/essay">
             <Essay />
           </Route>
+          <Route path="/multiple">
+            <MultipleChoice />
+          </Route>
+
           <Route path="/">
             <Home />
           </Route>

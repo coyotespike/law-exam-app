@@ -26,6 +26,7 @@ function Home() {
             Learn React
         </a>
         <Link to="/essay">Essay</Link>
+            <Link to="/multiple">Multiple Choice</Link>
         <Timer timeInMinutes={110} />
     </header>
     )
