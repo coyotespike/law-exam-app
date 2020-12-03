@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Context from "./Context";
 
 import "./App.css";
 
@@ -9,22 +10,24 @@ import Home from "./Home";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/essay">
-            <Essay />
-          </Route>
-          <Route path="/multiple">
-            <MultipleChoice />
-          </Route>
+    <Context>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route path="/essay">
+              <Essay />
+            </Route>
+            <Route path="/multiple">
+              <MultipleChoice />
+            </Route>
 
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </Context>
   );
 }
 
