@@ -8,10 +8,9 @@ import FormHelperText from "@material-ui/core/FormHelperText";
 import FormLabel from "@material-ui/core/FormLabel";
 import Button from "@material-ui/core/Button";
 
+import Drawer from "../Drawer";
+
 const useStyles = makeStyles((theme) => ({
-  formControl: {
-    margin: theme.spacing(3),
-  },
   button: {
     margin: theme.spacing(1, 1, 0, 0),
   },
@@ -49,30 +48,33 @@ export default function QuizQuestion({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <FormControl component="fieldset" error={error}>
-        <FormLabel component="legend">{prompt}</FormLabel>
-        <RadioGroup value={value} onChange={handleChange}>
-          {options.map((option) => (
-            <FormControlLabel
-              key={option}
-              value={option}
-              control={<Radio />}
-              label={option}
-            />
-          ))}
-        </RadioGroup>
-        <FormHelperText>{helperText}</FormHelperText>
+    <>
+      <Drawer />
+      <form onSubmit={handleSubmit}>
+        <FormControl component="fieldset" error={error}>
+          <FormLabel component="legend">{prompt}</FormLabel>
+          <RadioGroup value={value} onChange={handleChange}>
+            {options.map((option) => (
+              <FormControlLabel
+                key={option}
+                value={option}
+                control={<Radio />}
+                label={option}
+              />
+            ))}
+          </RadioGroup>
+          <FormHelperText>{helperText}</FormHelperText>
 
-        <Button
-          type="submit"
-          variant="outlined"
-          color="primary"
-          className={classes.button}
-        >
-          Check Answer
-        </Button>
-      </FormControl>
-    </form>
+          <Button
+            type="submit"
+            variant="outlined"
+            color="primary"
+            className={classes.button}
+          >
+            Check Answer
+          </Button>
+        </FormControl>
+      </form>
+    </>
   );
 }
