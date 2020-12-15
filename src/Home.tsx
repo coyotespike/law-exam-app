@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import logo from "./logo.svg";
 import Login from "./Login";
-import Timer from "./Timer";
 
 function Home() {
   return (
@@ -21,9 +20,7 @@ function Home() {
       >
         Learn React
       </a>
-      <Link to="/essay">Essay</Link>
       <Link to="/questions">Questions</Link>
-      <Timer timeInMinutes={110} />
     </header>
   );
 }

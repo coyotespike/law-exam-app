@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
-import { RootContext } from "../Context";
+import { RootContext } from "./Context";
 import MultipleChoice from "./MultipleChoice";
+import Essay from "./OpenEndedQuestion";
 
 import Button from "@material-ui/core/Button";
 
@@ -17,13 +18,14 @@ export default function Quiz() {
 
   return (
     <>
-      {question.category === "TF" || "MultipleChoice" ? (
+      {question.category === "OpenAnswer" ? (
+          <Essay prompt={question.prompt}
+              />
+      ) : (
         <MultipleChoice
-          options={question.options || []}
+          options={question.options || ["True", "False"]}
           prompt={question.prompt}
         />
-      ) : (
-        <div></div>
       )}
       <Button onClick={handleClick} variant="outlined" color="primary">
         Next Question
