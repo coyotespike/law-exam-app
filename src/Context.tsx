@@ -5,7 +5,7 @@ import React, { ReactChild, ReactChildren, ReactNode } from "react";
 
 type cardInfoType = { category: string; prompt: string; options?: string[] };
 const cardInfo = [
-  { category: "TF", prompt: "Learned Hand", options: ["True", "False"] },
+  { category: "TF", prompt: "Learned Hand" },
   {
     category: "MultipleChoice",
     prompt: "which one is right",

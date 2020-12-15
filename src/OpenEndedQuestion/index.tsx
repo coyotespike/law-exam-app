@@ -1,3 +1,3 @@
-import Essay from './Essay'
+import Essay from "./EssayContainer";
 
 export default Essay;

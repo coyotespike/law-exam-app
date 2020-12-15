@@ -19,7 +19,8 @@ export default function Quiz() {
   return (
     <>
       {question.category === "OpenAnswer" ? (
-        <Essay />
+          <Essay prompt={question.prompt}
+              />
       ) : (
         <MultipleChoice
           options={question.options || ["True", "False"]}

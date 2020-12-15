@@ -20,7 +20,6 @@ function Home() {
       >
         Learn React
       </a>
-      <Link to="/essay">Essay</Link>
       <Link to="/questions">Questions</Link>
     </header>
   );
