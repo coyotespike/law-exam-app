@@ -5,7 +5,7 @@ import Context from "./Context";
 import "./App.css";
 
 import Essay from "./OpenEndedQuestion";
-import MultipleChoice from "./MultipleChoice";
+import { QuestionsContainer } from "./MultipleChoice";
 import Home from "./Home";
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
             <Route path="/essay">
               <Essay />
             </Route>
-            <Route path="/multiple">
-              <MultipleChoice />
+            <Route path="/questions">
+              <QuestionsContainer />
             </Route>
 
             <Route path="/">
