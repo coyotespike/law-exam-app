@@ -10,8 +10,8 @@ import Home from "./Home";
 
 function App() {
   return (
-    <Context>
-      <Router>
+    <Router>
+      <Context>
         <div className="App">
           <Switch>
             <Route path="/essay">
@@ -20,14 +20,13 @@ function App() {
             <Route path="/questions">
               <QuestionsContainer />
             </Route>
-
             <Route path="/">
               <Home />
             </Route>
           </Switch>
         </div>
-      </Router>
-    </Context>
+      </Context>
+    </Router>
   );
 }
 

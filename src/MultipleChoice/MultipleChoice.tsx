@@ -17,7 +17,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RadioButtonsGroup() {
+export default function QuizQuestion({
+  options,
+  prompt,
+}: {
+  options: string[];
+  prompt: string;
+}) {
   const classes = useStyles();
   const [value, setValue] = React.useState("");
   const [helperText, setHelperText] = React.useState("Choose wisely");
@@ -45,22 +51,16 @@ export default function RadioButtonsGroup() {
   return (
     <form onSubmit={handleSubmit}>
       <FormControl component="fieldset" error={error}>
-        <FormLabel component="legend">Gender</FormLabel>
-        <RadioGroup
-          aria-label="gender"
-          name="gender1"
-          value={value}
-          onChange={handleChange}
-        >
-          <FormControlLabel value="female" control={<Radio />} label="Female" />
-          <FormControlLabel value="male" control={<Radio />} label="Male" />
-          <FormControlLabel value="other" control={<Radio />} label="Other" />
-          <FormControlLabel
-            value="disabled"
-            disabled
-            control={<Radio />}
-            label="(Disabled option)"
-          />
+        <FormLabel component="legend">{prompt}</FormLabel>
+        <RadioGroup value={value} onChange={handleChange}>
+          {options.map((option) => (
+            <FormControlLabel
+              key={option}
+              value={option}
+              control={<Radio />}
+              label={option}
+            />
+          ))}
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
 

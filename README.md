@@ -40,6 +40,17 @@ On hiding entire component, display tooltip for 2 seconds "I will be in settings
 
 Stretch: make Timer draggable.
 
+# Information Architecture
+I'll probably some Apollo hook to get info and store it in a context.
+
+Think I'll store each card/question info in an object. Array of objects, or object of objects indexed by question id? Probably the former.
+
+Default config can include this array of objects. If in production, then the hook hits the database, otherwise this default config.
+
+Gonna need to update this context on the fly as well, ofc.
+
+But let's not go crazy here.
+
 # Wiring
 
 ## Available Scripts
