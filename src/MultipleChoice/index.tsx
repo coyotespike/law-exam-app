@@ -1,5 +1,3 @@
-import MultipleChoice from './MultipleChoice'
-import QuestionsContainer from './QuestionsContainer'
+import MultipleChoice from "./MultipleChoice";
 
-export { QuestionsContainer }
-export default MultipleChoice
+export default MultipleChoice;

@@ -5,7 +5,7 @@ import Context from "./Context";
 import "./App.css";
 
 import Essay from "./OpenEndedQuestion";
-import { QuestionsContainer } from "./MultipleChoice";
+import QuestionsContainer from "./Quiz";
 import Home from "./Home";
 
 function App() {
