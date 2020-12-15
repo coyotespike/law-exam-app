@@ -11,9 +11,6 @@ import Button from "@material-ui/core/Button";
 import Drawer from "../Drawer";
 
 const useStyles = makeStyles((theme) => ({
-  formControl: {
-    margin: theme.spacing(3),
-  },
   button: {
     margin: theme.spacing(1, 1, 0, 0),
   },
