@@ -1,29 +1,31 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Context from "./Context";
 
 import "./App.css";
 
 import Essay from "./OpenEndedQuestion";
-import MultipleChoice from "./MultipleChoice";
+import { QuestionsContainer } from "./MultipleChoice";
 import Home from "./Home";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/essay">
-            <Essay />
-          </Route>
-          <Route path="/multiple">
-            <MultipleChoice />
-          </Route>
-
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <Context>
+        <div className="App">
+          <Switch>
+            <Route path="/essay">
+              <Essay />
+            </Route>
+            <Route path="/questions">
+              <QuestionsContainer />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </Context>
     </Router>
   );
 }
