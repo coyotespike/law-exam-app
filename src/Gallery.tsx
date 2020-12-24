@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import {
+  Card,
   GridList,
   GridListTile,
   GridListTileBar,
@@ -8,14 +9,13 @@ import {
 } from "@material-ui/core";
 
 import { RootContext } from "./Context";
-import MultipleChoice from "./MultipleChoice";
-import Essay from "./OpenEndedQuestion";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
+    minHeight: "85%",
   },
 
   root: {
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "space-around",
     overflow: "hidden",
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "black",
   },
   gridList: {
     flexWrap: "nowrap",

@@ -4,7 +4,7 @@ import Context from "./Context";
 
 import "./App.css";
 
-import QuestionsContainer from "./Quiz";
+import StudentQuizView from "./QuizView";
 import Home from "./Home";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route path="/questions">
-              <QuestionsContainer />
+              <StudentQuizView />
             </Route>
             <Route path="/">
               <Home />
