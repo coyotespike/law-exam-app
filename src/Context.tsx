@@ -11,7 +11,7 @@ const cardInfo = [
     prompt: "which one is right",
     options: ["yes", "no", "maybe"],
   },
-  { category: "OpenAnswer", prompt: "meaning of life" },
+  { category: "OpenAnswer", prompt: "What is the meaning of life?" },
 ] as cardInfoType[];
 
 export const RootContext = React.createContext(cardInfo);
